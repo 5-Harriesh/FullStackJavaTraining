@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function textBoxBlur() {
+            var listCreatorObj = document.querySelector('input[name="listCreator"]');
+            var times = parseInt(listCreatorObj.value);
+            var playAreaObject = document.querySelector('div[name="playArea"]');
+            
+
+
+            for (var index = 0; index < times; index++) {
+                var radioTemp = document.createElement('input');
+                radioTemp.setAttribute('name', 'listradio');
+                radioTemp.setAttribute('type', 'radio');
+                var textTemp = document.createElement('input');
+                textTemp.setAttribute('name', 'listtext'+index);
+                textTemp.setAttribute('value', 'listtext'+index);
+                textTemp.setAttribute('readOnly', true)
+                playAreaObject.appendChild(radioTemp);
+                playAreaObject.appendChild(textTemp);
+                
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    How many list to create for you ?
+    <input onblur="textBoxBlur()" name="listCreator">
+    <div style="width: 180px" name="playArea"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Live Notes</title>
+</head>
+
+<body>
+    <script src="LiveNotes.js"> </script>
+
+
+    <div style="height: 80vh;width: 80vw;float: left;">
+        <textarea name="notesArea" placeholder="Start taking notes here !!!" style="height:100%;width:100%"></textarea>
+    </div>
+    <div style="height: 80vh;width: 10vw;float: left;">
+        <label style="margin-left:10px;height:100%;width:100%">List of Notes saved</label>
+        <div style="margin-left:10px;">
+        <ul name="notesList">
+
+        </ul>
+        </div>
+    </div>
+
+
+    <div style="padding:20px;float:right;width: 50px;border: 2px;background: sandybrown">
+        <button style="border-radius:50%;font-size: 54px;" name="save" onclick="clickFunc('save')">#</button>
+        <label style="margin-left:10px">Save</label>
+        <button style="border-radius:50%;font-size: 54px;" name="new" onclick="clickFunc('new')">+</button>
+        <label style="margin-left:10px">New</label>
+        <button style="border-radius:50%;font-size: 54px;" name="load" onclick="clickFunc('load')">0</button>
+        <label style="margin-left:10px">Load</label>
+    </div>
+
+
+</body>
+
+</html>
